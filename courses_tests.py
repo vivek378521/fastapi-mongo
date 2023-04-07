@@ -9,7 +9,7 @@ client = TestClient(app)
 def test_find_all_courses():
     response = client.get("/courses")
     assert response.status_code == 200
-    assert len(response.json()["data"]) == 4  # Assuming there are three courses in the database
+    assert len(response.json()["data"]) == 4  # Assuming there are four courses in the database
 
 def test_sort_courses():
     response = client.get("/courses?sort=title")
